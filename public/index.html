@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapSOunds - Global Sound Sharing</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="container">
+                <a href="/" class="logo">MapSOunds</a>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="icon-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div id="auth-section">
+                        <button id="login-btn" class="btn btn-outline">Login</button>
+                        <button id="register-btn" class="btn">Register</button>
+                    </div>
+                    <div id="user-section" class="hidden">
+                        <button id="profile-btn" class="btn btn-outline">
+                            <i class="fas fa-user"></i>
+                            <span id="user-name-display"></span>
+                        </button>
+                        <button id="logout-btn" class="btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="landing-page">
+                <div class="hero">
+                    <div class="hero-content">
+                        <h1>Discover Sounds from Around the World</h1>
+                        <p>MapSOunds is a global platform for sharing and exploring sounds - music, conversations, ambient sounds, and more.</p>
+                        <div class="hero-actions">
+                            <button id="explore-map-btn" class="btn">
+                                <i class="fas fa-map-marked-alt"></i>
+                                Explore Map
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="features">
+                    <div class="container">
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <i class="fas fa-globe feature-icon"></i>
+                                <h3>Global Map</h3>
+                                <p>Explore sounds from every corner of the world on our interactive map</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-music feature-icon"></i>
+                                <h3>Share Sounds</h3>
+                                <p>Upload your own sounds or record directly from your browser</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-users feature-icon"></i>
+                                <h3>Community</h3>
+                                <p>Connect with sound enthusiasts from around the globe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="map-section" class="hidden">
+                <div id="map-container">
+                    <div id="map"></div>
+                    <div class="map-overlay">
+                        <button id="back-to-landing" class="btn btn-outline">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Home
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="modal" class="modal hidden">
+            <div class="modal-overlay"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h2 id="modal-title">Modal Title</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/map.js"></script>
+</body>
+</html>
